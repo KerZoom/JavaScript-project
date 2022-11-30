@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="styleSheet.css">
+<script src="jsCode.js"></script>
+<body>
+<div id="elements">
+    <form id="Form">
+        <label class="title">Your details:</label><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" value=""><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" value=""><br><br>
+
+        <label>Are you the owner or a tenet of the property?</label><br>
+        <label for="Owner">Owner:</label>
+        <input type="radio" id="Owner" name="OwnerOrTenet" value="Owner">
+        <label for="Tenet">Tenet:</label>
+        <input type="radio" id="Tenet" name="OwnerOrTenet" value="Tenet"><br><br>
+
+        <label class="title">Property details:</label><br>
+        <label for="numOFRooms" >Number of rooms:</label>
+        <input type="text" id="numOfRooms" maxlength="2" value=""><br>
+        <label for="yearBuilt">Year built:</label>
+        <input type="text" id="yearBuilt" value=""><br><br>
+
+        <label>Is the property inside or outside Dublin?</label><br>
+        <label for="Dublin">Dublin:</label>
+        <input type="radio" id="Dublin" name="area" value="Dublin">
+        <label for="OutsideDublin">Outside Dublin</label>
+        <input type="radio" id="OutsideDublin" name="area" value="OutsideDublin"><br><br>
+
+        <label>What type of house do you want to insure?</label><br>
+        <select id="houseType">
+        </select><br><br>
+
+        <label>Cover type:</label><br>
+        <select id="coverType">
+        </select><br><br>
+
+        <label>Contents cover:</label><br>
+        <select id="contentsCover">
+        </select><br><br>
+
+        <label>Building cover:</label><br>
+        <select id="buildingCover">
+        </select><br><br>
+
+        <label for="yearsClaimsFree">Years claims free:</label>
+        <input type="text" id="yearsClaimsFree" maxlength="2" value=""><br><br><br>
+
+        <label for="runningTotal">Total:</label>
+        <input type="text" id="runningTotal" value="" readonly><br><br>
+
+        <input type="button" id="calculate" value="Calculate">
+    </form>
+</div>
+</body>
+</html>
