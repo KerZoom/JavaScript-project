@@ -57,31 +57,41 @@ function validateAndUpdate(){
         ownerShip = false;
     }
 
-
-
-
-    if (ownerShip === true){
-        if (isNumerical(((document.getElementById("numOfRooms").value).toString()))){
-            document.getElementById("runningTotal").value = (valueA + valueB + valueC).toString();
-        }
-        else {
-            window.alert("Error, number of rooms entered is invalid");
+    if (document.getElementById("name").value !== null && (document.getElementById("name").value).length
+        < 10 && (document.getElementById("name").value).length > 0) {
+        if (ownerShip === true) {
+            if (isNumerical(((document.getElementById("numOfRooms").value).toString())) &&
+                document.getElementById("numOfRooms").value.toString().length > 0) {
+                document.getElementById("runningTotal").value = (valueA + valueB + valueC).toString();
+            } else {
+                window.alert("Error, number of rooms entered is invalid");
+                document.getElementById("runningTotal").value = 0;
+            }
+        } else {
+            window.alert("Error enter Tenant or Owner");
             document.getElementById("runningTotal").value = 0;
         }
     }
-    else{
-        window.alert("Error enter Tenant or Owner");
-        document.getElementById("runningTotal").value = 0;
-    }
+    else
+        window.alert("Name cannot be empty or greater than 10");
 }
 
 function isNumerical(String){
     let valid = true;
     for (let i = 0;i<String.length;i++) {
-        if (!isNaN(String.charAt(i))) {
+        if (isNaN(String.charAt(i))) {
             valid = false;
             break;
         }
     }
     return valid;
+}
+function validEmail(String){
+    let atSymbols = 0;
+    for (let i = 0;i<String.length;i++) {
+        if (String.charAt(i) === "@") {
+            atSymbols++;
+        }
+    }
+
 }
