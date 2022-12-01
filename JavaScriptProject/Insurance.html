@@ -10,24 +10,24 @@
 <div id="elements">
     <form id="Form">
         <label class="title">Your details:</label><br>
-        <label for="name">Name:</label>
+        <label for="name" id="nameLabel">Name:</label>
         <input type="text" id="name" value=""><br>
-        <label for="email">Email:</label>
+        <label for="email" id="emailLabel">Email:</label>
         <input type="text" id="email" value=""><br><br>
 
-        <label>Are you the owner or a tenet of the property?</label><br>
+        <label id="ownerLabel">Are you the owner or a tenet of the property?</label><br>
         <label for="Owner">Owner:</label>
         <input type="radio" id="Owner" name="OwnerOrTenet" value="Owner">
         <label for="Tenet">Tenet:</label>
         <input type="radio" id="Tenet" name="OwnerOrTenet" value="Tenet"><br><br>
 
         <label class="title">Property details:</label><br>
-        <label for="numOFRooms" >Number of rooms:</label>
+        <label for="numOFRooms" id="roomsLabel">Number of rooms:</label>
         <input type="text" id="numOfRooms" maxlength="2" value=""><br>
-        <label for="yearBuilt">Year built:</label>
+        <label for="yearBuilt" id="yearBuiltLabel">Year built:</label>
         <input type="text" id="yearBuilt" value=""><br><br>
 
-        <label>Is the property inside or outside Dublin?</label><br>
+        <label id="dublinLabel">Is the property inside or outside Dublin?</label><br>
         <label for="Dublin">Dublin:</label>
         <input type="radio" id="Dublin" name="area" value="Dublin">
         <label for="OutsideDublin">Outside Dublin</label>
@@ -49,7 +49,7 @@
         <select id="buildingCover">
         </select><br><br>
 
-        <label for="yearsClaimsFree">Years claims free:</label>
+        <label for="yearsClaimsFree" id="freeYearsLabel">Years claims free:</label>
         <input type="text" id="yearsClaimsFree" maxlength="2" value=""><br><br><br>
 
         <label for="runningTotal">Total:</label>
