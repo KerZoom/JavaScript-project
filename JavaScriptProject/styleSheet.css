@@ -2,12 +2,11 @@
     font-weight:bold;
 }
 #container{
+    display:flex;
 }
 #elements{
     width:400px;
-    float:left;
 }
 #helpBox{
-    visibility: hidden;
-    float:left;
+    width:500px;
 }
