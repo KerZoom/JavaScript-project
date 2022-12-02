@@ -5,6 +5,7 @@ let coverTypes = ["Owner occupied","Holiday","Rental"]
 let totalCost = 0, ownerShipValue = 0, bedroomValue = 0, areaValue = 0, yearValue = 0, propertyTypeValue = 0,
     coverValue = 0, contentsValue = 0, buildingValue = 0, yearsFreeValue = 0;
 const currentDate = new Date().getFullYear();
+
 function loadStuff(){
     total = document.getElementById("runningTotal")
     total.value = 0;
@@ -231,5 +232,14 @@ function validYear(date){
 function validYearsFree(years, year){
     if (years.value <= (currentDate - year.value) && years.value >= 0){
         return true;
+    }
+}
+function help(String){
+    console.log("works");
+    let helpBox = document.getElementById("helpBox");
+    switch (String){
+        case("userName"):
+            helpBox.style.visibility = "visible";
+            break;
     }
 }

@@ -1,3 +1,13 @@
 .title{
     font-weight:bold;
 }
+#container{
+}
+#elements{
+    width:400px;
+    float:left;
+}
+#helpBox{
+    visibility: hidden;
+    float:left;
+}
