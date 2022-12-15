@@ -8,7 +8,7 @@ const currentDate = new Date().getFullYear();
 let reset = false;
 function loadStuff(){
 
-    setInterval("resetPage()", 40000);
+    setInterval("resetPage()", 20000);
     total = document.getElementById("runningTotal")
     total.value = 0;
     yearsFree = document.getElementById("yearsClaimsFree");
@@ -141,7 +141,7 @@ function validateAndUpdate(){
     let dublinLabel = document.getElementById("dublinLabel");
     let freeYearsLabel = document.getElementById("freeYearsLabel");
 
-    while (reset) {
+    if (!reset) {
         if (userName.value !== null && userName.value.length < 20 &&
             userName.value.length > 0) {
             nameLabel.style.color = '#000000';
@@ -245,7 +245,7 @@ function validYearsFree(years, year){
     }
 }
 function help(String){
-    while (reset) {
+    if (!reset) {
         let helpBox = document.getElementById("helpBox");
         switch (String) {
             case("name"):
@@ -307,6 +307,7 @@ function help(String){
 }
 function resetPage(){
     reset = true;
+    document.getElementsByClassName("input").readOnly = true;
     let helpBox = document.getElementById("helpBox");
     helpBox.innerText= "You took longer than 4 minutes, page has to be reset, please click the button below to reset\n\n"
     helpBox.style.visibility = "visible"
@@ -316,5 +317,4 @@ function resetPage(){
         location.reload();
     })
     helpBox.append(resetButton);
-
 }
