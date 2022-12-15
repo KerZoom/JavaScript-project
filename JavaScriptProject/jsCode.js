@@ -2,7 +2,7 @@ window.onload = loadStuff;
 
 let houseTypes = ["Bungalow","Country House","Detached","Semi Detached","Terraced","Flat"]
 let coverTypes = ["Owner occupied","Holiday","Rental"]
-let totalCost = 0, ownerShipValue = 0, bedroomValue = 0, areaValue = 0, yearValue = 0, propertyTypeValue = 0,
+let ownerShipValue = 0, bedroomValue = 0, areaValue = 0, yearValue = 0, propertyTypeValue = 0,
     coverValue = 0, contentsValue = 0, buildingValue = 0, yearsFreeValue = 0;
 const currentDate = new Date().getFullYear();
 let reset = false;
